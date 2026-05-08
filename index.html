@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dice & Coin Master is a glassmorphism utility hub for RPG dice, classic dice, chess clocks, sand timers, coin flips, and customizable spin wheels." />
+    <meta name="theme-color" content="#07110f" />
+    <meta name="application-name" content="Dice & Coin Master" />
+    <meta name="apple-mobile-web-app-title" content="Dice Master" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Dice & Coin Master | Random Game Tools</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-ByewuOZE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CaEDkvjD.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="main-header">
+        <a class="brand-lockup" href="#app" aria-label="Dice & Coin Master home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="/favicon.svg" alt="" />
+          </span>
+          <span class="brand-text">
+            <span>Dice & Coin</span>
+            <strong>Master</strong>
+          </span>
+        </a>
+
+        <nav class="quick-nav" aria-label="Tool shortcuts">
+          <a href="#coin-card">Coin</a>
+          <a href="#simple-dice-card">Dice</a>
+          <a href="#dice-card">RPG</a>
+          <a href="#timer-card">Timer</a>
+          <a href="#chess-timer-card">Chess</a>
+          <a href="#wheel-card">Wheel</a>
+        </nav>
+
+        <div class="controls">
+          <button id="theme-toggle" class="glass-btn" type="button">
+            <span class="icon" aria-hidden="true">◐</span>
+            <span class="text">Theme</span>
+          </button>
+        </div>
+      </header>
+
+      <main id="app">
+        <section class="tool-deck" aria-labelledby="toolkit-title">
+          <div class="deck-intro">
+            <div>
+              <p class="eyebrow">Glass utility hub</p>
+              <h1 id="toolkit-title">Randomizers and timers for serious play.</h1>
+            </div>
+            <div class="status-strip" aria-label="Toolkit highlights">
+              <span><strong>6</strong> Tools</span>
+              <span><strong>Crypto</strong> Random</span>
+              <span><strong>Zero</strong> Setup</span>
+            </div>
+          </div>
+
+          <div class="grid-container">
+            <section id="coin-card" class="card">
+              <header class="card-header">
+                <h2>Gold Coin Flip</h2>
+                <button class="minimize-btn" data-card="coin-card" type="button" aria-label="Minimize Gold Coin Flip">−</button>
+              </header>
+              <div class="card-content">
+                <div class="visual-area">
+                  <div id="coin" class="coin">
+                    <div class="side heads"></div>
+                    <div class="side tails"></div>
+                  </div>
+                </div>
+                <div class="action-area">
+                  <button id="flip-btn" class="primary-btn" type="button">Flip Coin</button>
+                  <p id="coin-result" class="result-text">Waiting...</p>
+                </div>
+              </div>
+            </section>
+
+            <section id="simple-dice-card" class="card">
+              <header class="card-header">
+                <h2>Dice Roller</h2>
+                <button class="minimize-btn" data-card="simple-dice-card" type="button" aria-label="Minimize Dice Roller">−</button>
+              </header>
+              <div class="card-content">
+                <div class="dice-config">
+                  <div class="input-group">
+                    <label for="simple-dice-count">Dice Count</label>
+                    <select id="simple-dice-count">
+                      <option value="1">1 Die</option>
+                      <option value="2">2 Dice</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="visual-area">
+                  <div id="simple-dice-container"></div>
+                  <div id="simple-dice-sum" class="sum-overlay">?</div>
+                </div>
+                <div class="action-area h-stack">
+                  <button id="simple-roll-btn" class="primary-btn" type="button">Roll & Sum</button>
+                </div>
+              </div>
+            </section>
+
+            <section id="dice-card" class="card">
+              <header class="card-header">
+                <h2>RPG Dice Roller</h2>
+                <button class="minimize-btn" data-card="dice-card" type="button" aria-label="Minimize RPG Dice Roller">−</button>
+              </header>
+              <div class="card-content">
+                <div class="dice-config">
+                  <div class="input-group">
+                    <label for="dice-count">Dice Count (Max 8)</label>
+                    <input type="number" id="dice-count" value="1" min="1" max="8">
+                  </div>
+                  <div class="input-group">
+                    <label for="dice-faces">Faces</label>
+                    <select id="dice-faces">
+                      <option value="4">D4</option>
+                      <option value="6" selected>D6</option>
+                      <option value="8">D8</option>
+                      <option value="10">D10</option>
+                      <option value="percentile">D% (D100)</option>
+                      <option value="12">D12</option>
+                      <option value="20">D20</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="visual-area" id="dice-container"></div>
+                <div class="action-area">
+                  <button id="roll-btn" class="primary-btn" type="button">Roll RPG Dice</button>
+                </div>
+              </div>
+            </section>
+
+            <section id="timer-card" class="card">
+              <header class="card-header">
+                <h2>Sand Timer</h2>
+                <button class="minimize-btn" data-card="timer-card" type="button" aria-label="Minimize Sand Timer">−</button>
+              </header>
+              <div class="card-content">
+                <div class="visual-area timer-visual">
+                  <div class="hourglass" id="hourglass">
+                    <svg viewBox="0 0 100 160" width="100" height="160" aria-hidden="true">
+                      <path d="M5,5 L95,5 M5,155 L95,155" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
+                      <path id="sand-top-path" d="M16.5,12 L83.5,12 L50,78 Z" fill="#f0b429" />
+                      <path id="sand-bottom-path" d="M50,148 L50,148 L50,148 Z" fill="#f0b429" />
+                      <path id="sand-stream" d="M50,78 L50,148" stroke="#f0b429" stroke-width="2" stroke-dasharray="2,2" opacity="0" fill="none">
+                        <animate attributeName="stroke-dashoffset" from="0" to="4" dur="0.2s" repeatCount="indefinite" />
+                      </path>
+                      <path d="M15,10 L85,10 L50,80 Z" fill="rgba(255,255,255,0.08)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" pointer-events="none" />
+                      <path d="M50,80 L85,150 L15,150 Z" fill="rgba(255,255,255,0.08)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" pointer-events="none" />
+                    </svg>
+                  </div>
+                  <div id="countdown-display" class="timer-text">00:00</div>
+                </div>
+                <div class="action-area">
+                  <div class="input-group">
+                    <label for="timer-seconds">Duration</label>
+                    <input type="number" id="timer-seconds" value="60" min="1" max="120">
+                    <div class="unit-toggle-container">
+                      <span id="unit-label-secs" class="active">Secs</span>
+                      <label class="switch" aria-label="Toggle timer unit">
+                        <input type="checkbox" id="timer-unit-toggle">
+                        <span class="slider round"></span>
+                      </label>
+                      <span id="unit-label-mins">Mins</span>
+                    </div>
+                  </div>
+                  <div class="timer-btns">
+                    <button id="timer-start-btn" class="primary-btn" type="button">Start</button>
+                    <button id="timer-reset-btn" class="glass-btn" type="button">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="chess-timer-card" class="card">
+              <header class="card-header">
+                <h2>Chess Timer</h2>
+                <button class="minimize-btn" data-card="chess-timer-card" type="button" aria-label="Minimize Chess Timer">−</button>
+              </header>
+              <div class="card-content">
+                <div class="chess-names">
+                  <input type="text" id="p1-name-input" value="Player 1" placeholder="P1 Name" aria-label="Player 1 name">
+                  <input type="text" id="p2-name-input" value="Player 2" placeholder="P2 Name" aria-label="Player 2 name">
+                </div>
+                <div class="chess-clocks-container">
+                  <div id="player1-clock" class="chess-clock active">
+                    <span class="player-label-display" id="p1-label">Player 1</span>
+                    <span class="clock-display" id="p1-display">05:00</span>
+                  </div>
+                  <div id="player2-clock" class="chess-clock">
+                    <span class="player-label-display" id="p2-label">Player 2</span>
+                    <span class="clock-display" id="p2-display">05:00</span>
+                  </div>
+                </div>
+                <div class="chess-controls-simple">
+                  <div class="input-group">
+                    <label for="chess-init-time">Match Time (Mins)</label>
+                    <input type="number" id="chess-init-time" value="5" min="1" max="30">
+                  </div>
+                  <button id="chess-done-btn" class="primary-btn big-done-btn" type="button">DONE</button>
+                  <button id="chess-reset-btn" class="glass-btn" type="button">Reset Match</button>
+                </div>
+              </div>
+            </section>
+
+            <section id="wheel-card" class="card">
+              <header class="card-header">
+                <h2>Wheel Spinner</h2>
+                <button class="minimize-btn" data-card="wheel-card" type="button" aria-label="Minimize Wheel Spinner">−</button>
+              </header>
+              <div class="card-content">
+                <div class="visual-area">
+                  <div id="wheel-container">
+                    <canvas id="wheel-canvas" width="300" height="300"></canvas>
+                    <div id="wheel-pointer"></div>
+                    <button id="spin-btn" class="primary-btn overlay-spin-btn" type="button">SPIN</button>
+                  </div>
+                </div>
+                <div class="action-area scrollable">
+                  <div class="wheel-config">
+                    <h3>Segments</h3>
+                    <div id="segments-list"></div>
+                    <button id="add-segment-btn" class="glass-btn small" type="button">+ Add</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="seo-description" aria-labelledby="seo-heading">
+          <div class="seo-copy">
+            <p>Elevate your digital toolkit with the ultimate aesthetic utility hub. Experience a <strong>one-of-a-kind glassmorphism interface</strong> that blends high-end design with surgical precision. Whether you’re settling a tabletop dispute or timing a Grandmaster gambit, our ultra-accurate algorithms ensure every result is truly random and perfectly synced.</p>
+
+            <h2 id="seo-heading"><strong>The Ultimate Toolkit for Gamers & Decision Makers</strong></h2>
+            <ul>
+              <li><strong>RPG Dice Roller:</strong> A comprehensive suite for tabletop legends. Roll d4 through d100 with physics-based accuracy and stunning visual flair.</li>
+              <li><strong>Classic Dice Roller:</strong> Clean, responsive, and perfect for any board game night.</li>
+              <li><strong>Chess Clock:</strong> Professional-grade precision with a sleek, translucent aesthetic for high-stakes matches.</li>
+              <li><strong>Sand Timer:</strong> A mesmerizing, modern take on a classic countdown—perfect for focus or turn-based play.</li>
+              <li><strong>Coin Flipper:</strong> High-fidelity, physics-based luck with a satisfying "glass-touch" finish.</li>
+              <li><strong>Spin Wheel:</strong> Fully customizable, vibrant, and silky-smooth rotation for prizes or random picks.</li>
+            </ul>
+
+            <h3><strong>Master Your Games with Elite Design</strong></h3>
+            <p>Stop using clunky, outdated tools. Our site features a <strong>breath-taking glassmorphism UI</strong>, offering a frosted, layered look that feels like the future of the web. Beneath the beautiful exterior lies a <strong>heavy-duty, transparent algorithm</strong> designed for those who demand 100% fairness and zero lag.</p>
+            <p>From the critical hits of our <strong>RPG Dice</strong> to the rhythmic tick of our <strong>digital sand timer</strong>, every interaction is crafted to be immersive. It’s not just a utility; it’s a vibe.</p>
+            <p><strong>Experience the most accurate, visually stunning game tools on the web today.</strong></p>
+            <p class="save-note"><strong>save this, URL to your homepage for instant access</strong></p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+  </body>
+</html>
